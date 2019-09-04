@@ -1,0 +1,11 @@
+products:
+   src/main/scala/org/evertones/model/Car.scala -> build/classes/scala/main/org/evertones/model/Car$.class
+   src/main/scala/org/evertones/model/Car.scala -> build/classes/scala/main/org/evertones/model/Car.class
+binary dependencies:
+   src/main/scala/org/evertones/model/Car.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar
+   src/main/scala/org/evertones/model/Car.scala -> /Users/everton/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.12.0/270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala-library-2.12.0.jar
+source dependencies:
+external dependencies:
+class names:
+   src/main/scala/org/evertones/model/Car.scala -> org.evertones.model.Car
+   src/main/scala/org/evertones/model/Car.scala -> org.evertones.model.Car$

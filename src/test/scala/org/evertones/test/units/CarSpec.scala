@@ -1,4 +1,4 @@
-package org.evertones.test.unit
+package org.evertones.test.units
 
 import org.scalatest.FunSpec
 

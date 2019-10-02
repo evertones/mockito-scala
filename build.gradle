@@ -4,6 +4,9 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
 }
 
 group       = 'org.evertones'
@@ -19,6 +22,11 @@ ext.sclArt = { String artifactId ->
 }
 
 dependencies {
+    compile group: 'org.springframework', name: 'spring-core',   version: '4.3.18.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web',    version: '4.3.18.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.18.RELEASE'
+    compile group: 'org.springframework.data', name: 'spring-data-commons', version: '1.13.23.RELEASE'
+
     compile group: 'org.scala-lang', name: 'scala-library', version: project.ext.get('scala.version')
     compile group: 'org.scala-lang.modules', name: sclArt('scala-java8-compat'), version: project.ext.get('scala.modules.java8-compat.version')
 }
@@ -40,13 +48,17 @@ dependencies {
     }
 
     //testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: project.ext.get('hamcrest.version')
-    testImplementation group: 'org.mockito',  name: 'mockito-core',  version: project.ext.get('mockito.version')
+    //testImplementation group: 'org.mockito',  name: 'mockito-core',  version: project.ext.get('mockito.version')
+
+    // https://mvnrepository.com/artifact/org.mockito/mockito-scala
+    testCompile group: 'org.mockito', name: 'mockito-scala_2.12', version: '1.5.18'
 
     testImplementation group: 'com.devskiller', name: 'jfairy', version: project.ext.get('jfairy.version')
 
     // Selenium test framework
     testImplementation group: 'org.seleniumhq.selenium',      name: 'selenium-java',        version: project.ext.get('selenium.version')
     testImplementation group: 'org.seleniumhq.selenium',      name: 'selenium-server',      version: project.ext.get('selenium.version')
+
 }
 
 

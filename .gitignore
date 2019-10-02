@@ -13,6 +13,7 @@
 /target/
 /bin/
 /classes/
+build/
 
 # Eclipse, Intellij IDEA, and Sublime Text project configs
 /.settings/

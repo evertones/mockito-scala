@@ -17,10 +17,9 @@ class AccountDataAdapter extends XmlAdapter[String, AccountData] {
         val details = new Details(Random.nextInt(10))
         account.setDetails(details)
 
-        AccountData(account, timezoneData = Option(TimezoneData(new Timezone(1, "Sydney"), "AU")))
+        AccountData(account, timezoneData = Option(TimezoneData(new Timezone(1, "London"), "UK")))
     }
 
-    override def marshal(accountData: AccountData): String = {
-        "All done!"
-    }
+    override def marshal(accountData: AccountData): String = "All done!"
+
 }

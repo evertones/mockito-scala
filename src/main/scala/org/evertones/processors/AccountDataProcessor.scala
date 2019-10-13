@@ -9,15 +9,10 @@ class AccountDataProcessor
 
 
     def process(account: Account): AccountData = {
-        // process account multi locations
-        // TODO: This should not make any difference
-        //accountLocationService.loadLocations(account)
-
         // load relational dependencies
         account.getDetails.getId
 
         // load timezone data
-        //val timezoneData = timezoneDataProcessor.process(account.getTimezone)
         val timezoneData = TimezoneData(new Timezone(1, "Sydney"), "English")
 
         AccountData(account, timezoneData = Option(timezoneData))
